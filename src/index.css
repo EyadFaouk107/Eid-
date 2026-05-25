@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: "Cairo", "Plus Jakarta Sans", ui-sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom colors */
+  --color-gold-50: #fefcf3;
+  --color-gold-100: #fbf5df;
+  --color-gold-200: #f5e4b7;
+  --color-gold-300: #ecce84;
+  --color-gold-400: #e3b355;
+  --color-gold-500: #d4af37; /* Standard Gold */
+  --color-gold-600: #b58d2a;
+  --color-gold-700: #906b20;
+  --color-gold-800: #6e4e19;
+  --color-gold-900: #4a3411;
+
+  --color-dark-cream: #13120f;
+  --color-dark-navy: #060913;
+  --color-dark-crimson: #1d070b;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px -1px 0 rgba(239, 68, 68, 0.5), -2px 1px 0 rgba(59, 130, 246, 0.5);
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: -2px 2px 0 rgba(239, 68, 68, 0.7), 2px -2px 0 rgba(59, 130, 246, 0.7);
+    transform: translate(-2px, 1px);
+  }
+  40% {
+    text-shadow: 2px 2px 0 rgba(239, 68, 68, 0.5), -1px -1px 0 rgba(59, 130, 246, 0.5);
+    transform: translate(1px, -1px);
+  }
+  60% {
+    text-shadow: -1px -2px 0 rgba(239, 68, 68, 0.6), 2px 1px 0 rgba(59, 130, 246, 0.6);
+    transform: translate(-1px, 2px);
+  }
+  80% {
+    text-shadow: 2px -2px 0 rgba(239, 68, 68, 0.5), -2px -1px 0 rgba(59, 130, 246, 0.5);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    text-shadow: 1px 1px 0 rgba(239, 68, 68, 0.5), -1px 1px 0 rgba(59, 130, 246, 0.5);
+    transform: translate(0);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes gold-shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slow-pan {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Custom classes and overrides */
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), ui-sans-serif, system-ui;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic), "Cairo", ui-sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Custom styling for a luxury vibe */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #030408;
+  color: #f5e4b7;
+  overflow-x: hidden;
+  font-family: var(--font-sans), sans-serif;
+}
+
+.luxury-gradient {
+  background: radial-gradient(circle at center, rgba(16, 21, 40, 0.95) 0%, rgba(3, 4, 8, 1) 100%);
+}
+
+.crimson-glow {
+  box-shadow: 0 0 30px rgba(139, 0, 0, 0.25);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+/* Glassmorphism card premium style */
+.glass-panel {
+  background: rgba(10, 13, 26, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-panel-heavy {
+  background: rgba(8, 10, 20, 0.85);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* Glitch typography effect */
+.glitch-text {
+  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  color: rgb(239, 68, 68);
+}
+
+/* Gold shimmer button effects */
+.gold-shimmer-bg {
+  background: linear-gradient(-45deg, #4a3411, #906b20, #d4af37, #AA7C11, #4a3411);
+  background-size: 300% 300%;
+  animation: gold-shine 5s ease infinite;
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(to right, #fbf5df 20%, #d4af37 40%, #e3b355 60%, #fbf5df 80%);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030408;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AA7C11;
+}
+
+/* Sound indicator ripple effects */
+.ripple {
+  animation: absolute-ripple 1.5s linear infinite;
+}
+
+@keyframes absolute-ripple {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+

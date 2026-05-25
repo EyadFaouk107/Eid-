@@ -1,0 +1,6 @@
+{
+  "name": "Interactive Eid Surprise",
+  "description": "A luxury cinematic interactive friendship celebration and Eid card built with smooth motion, background particles, quiz quest, and an engaging animated envelope letter for Eyad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
